@@ -1,0 +1,40 @@
+Sample_ID,Tx_Type,Tx_Regimen,Start_Time,End_Time,Reason_Stop,Tx_Class,Tx_Class_Broad,Tx_Line,PFS_Month,PFS_Event,Bx_Days_From_Start,Bx_Days_From_End,Sample_Tx_Status
+P-0000015-T01-IM3,Adjuvant Systemic Therapy,AC-T,13729,13835,Planned Therapy Ended,Adj_Chemo,Chemotherapy-containing,NaN,3.5,NaN,2497,2391,Post-treatment
+P-0000015-T01-IM3,Adjuvant Systemic Therapy,Tamoxifen,13851,14384,Planned Therapy Ended,Adj_SERM,Hormone-single,NaN,17.5,NaN,2375,1842,Post-treatment
+P-0000015-T01-IM3,Adjuvant Systemic Therapy,Anastrozole,14401,15435,Toxicity,Adj_AI,Hormone-single,NaN,34,NaN,1825,791,Post-treatment
+P-0000015-T01-IM3,Adjuvant Systemic Therapy,Tamoxifen,15497,15780,Disease Progression,Adj_SERM,Hormone-single,NaN,9.3,NaN,729,446,Post-treatment
+P-0000015-T01-IM3,Treatment - distant metastases,Capecitabine,15780,15983,Disease Progression,Chemo,Chemotherapy-containing,1,6.7,1,446,243,Post-treatment
+P-0000015-T01-IM3,Treatment - distant metastases,Exemestane,15983,16027,Switch Treatment,AI,Hormone-single,2,1.4,0,243,199,Post-treatment
+P-0000015-T01-IM3,Treatment - distant metastases,Everolimus-Exemestane,16027,16095,Disease Progression,MTORi+AI,Hormone-MTORi,3,2.2,1,199,131,Post-treatment
+P-0000015-T01-IM3,Treatment - distant metastases,Investigational regimen,NaN,NaN,,,,4,NaN,NaN,NaN,NaN,
+P-0000015-T01-IM3,Treatment - distant metastases,Paclitaxel,16248,16291,Disease Progression,Chemo,Chemotherapy-containing,5,1.4,1,-22,-65,Pre-treatment
+P-0000015-T01-IM3,Treatment - distant metastases,Gemcitabine-Carboplatin,16305,16495,Disease Progression,Chemo,Chemotherapy-containing,6,6.2,1,-79,-269,Pre-treatment
+P-0000015-T01-IM3,Treatment - distant metastases,Vinorelbine,16506,16547,Disease Progression,Chemo,Chemotherapy-containing,7,1.3,1,-280,-321,Pre-treatment
+P-0000015-T01-IM3,Treatment - distant metastases,Epirubicin,16583,16611,Toxicity,Chemo,Chemotherapy-containing,8,0.9,0,-357,-385,Pre-treatment
+P-0000015-T01-IM3,Treatment - distant metastases,Fulvestrant-Letrozole,16611,16647,Disease Progression-Death,SERD+AI,Hormone-single,9,1.2,1,-385,-421,Pre-treatment
+P-0000288-T01-IM3,Treatment - distant metastases,Tamoxifen,14918,14933,Toxicity,SERM,Hormone-single,1,0.5,0,4224,4209,Post-treatment
+P-0000288-T01-IM3,Treatment - distant metastases,Letrozole,14933,19148,Disease Progression,AI,Hormone-single,2,138.5,1,4209,-6,Post-treatment
+P-0000288-T01-IM3,Treatment - distant metastases,Everolimus-Exemestane,19148,19380,Disease Progression,MTORi+AI,Hormone-MTORi,3,7.6,1,-6,-238,Pre-treatment
+P-0000288-T01-IM3,Treatment - distant metastases,Fulvestrant-Anastrozole,19443,19609,Disease Progression,SERD+AI,Hormone-single,4,5.5,1,-301,-467,Pre-treatment
+P-0000288-T01-IM3,Treatment - distant metastases,Capecitabine,19647,19676,Toxicity,Chemo,Chemotherapy-containing,5,1,0,-505,-534,Pre-treatment
+P-0000288-T01-IM3,Treatment - distant metastases,Doxorubicin,19694,19875,MD/Pt Preference,Chemo,Chemotherapy-containing,6,5.9,0,-552,-733,Pre-treatment
+P-0000288-T01-IM3,Treatment - distant metastases,Investigational regimen,NaN,NaN,,,,7,NaN,NaN,NaN,NaN,
+P-0000288-T01-IM3,Treatment - distant metastases,Vinorelbine,19996,20048,Disease Progression,Chemo,Chemotherapy-containing,8,1.7,1,-854,-906,Pre-treatment
+P-0000422-T01-IM3,Adjuvant Systemic Therapy,AC-T,17451,17549,Planned Therapy Ended,Adj_Chemo,Chemotherapy-containing,NaN,3.2,NaN,1499,1401,Post-treatment
+P-0000422-T01-IM3,Adjuvant Systemic Therapy,Tamoxifen,17637,18200,Disease Progression,Adj_SERM,Hormone-single,NaN,18.5,NaN,1313,750,Post-treatment
+P-0000422-T01-IM3,Treatment - distant metastases,Letrozole,18207,18316,Disease Progression,AI,Hormone-single,1,3.6,1,743,634,Post-treatment
+P-0000422-T01-IM3,Treatment - distant metastases,Capecitabine,18316,18893,Disease Progression,Chemo,Chemotherapy-containing,2,19,1,634,57,Post-treatment
+P-0000422-T01-IM3,Treatment - distant metastases,Exemestane,18919,19012,Disease Progression,AI,Hormone-single,3,3.1,1,31,-62,On-treatment
+P-0000422-T01-IM3,Treatment - distant metastases,Gemcitabine-Carboplatin,19012,19055,Disease Progression,Chemo,Chemotherapy-containing,4,1.4,1,-62,-105,Pre-treatment
+P-0000422-T01-IM3,Treatment - distant metastases,Exemestane,19081,19095,Switch Treatment,AI,Hormone-single,5,0.5,0,-131,-145,Pre-treatment
+P-0000422-T01-IM3,Treatment - distant metastases,Investigational regimen,NaN,NaN,,,,6,NaN,NaN,NaN,NaN,
+P-0000422-T01-IM3,Treatment - distant metastases,Eribulin,19177,19352,Disease Progression,Chemo,Chemotherapy-containing,7,5.7,1,-227,-402,Pre-treatment
+P-0000422-T01-IM3,Treatment - distant metastases,Paclitaxel,19366,19486,Disease Progression,Chemo,Chemotherapy-containing,8,3.9,1,-416,-536,Pre-treatment
+P-0000422-T01-IM3,Treatment - distant metastases,Palbociclib-Fulvestrant,19486,19573,Disease Progression,CDK46i+SERD,Hormone-CDK46i,9,2.9,1,-536,-623,Pre-treatment
+P-0000422-T01-IM3,Treatment - distant metastases,Investigational regimen,NaN,NaN,,,,10,NaN,NaN,NaN,NaN,
+P-0000468-T01-IM3,Treatment - distant metastases,AC-T,19806,19909,Planned Therapy Ended,Chemo,Chemotherapy-containing,1,3.4,0,438,335,Post-treatment
+P-0000468-T01-IM3,Treatment - distant metastases,Letrozole,19917,20236,Disease Progression,AI,Hormone-single,2,10.5,1,327,8,Post-treatment
+P-0000468-T01-IM3,Treatment - distant metastases,Investigational regimen,NaN,NaN,,,,3,NaN,NaN,NaN,NaN,
+P-0000468-T01-IM3,Treatment - distant metastases,Paclitaxel,20286,20316,Toxicity,Chemo,Chemotherapy-containing,4,1,0,-42,-72,Pre-treatment
+P-0000468-T01-IM3,Treatment - distant metastases,Nab paclitaxel,20316,20456,Disease Progression,Chemo,Chemotherapy-containing,5,4.6,1,-72,-212,Pre-treatment
+P-0000468-T01-IM3,Treatment - distant metastases,Everolimus-Exemestane,20491,20509,Disease Progression-Death,MTORi+AI,Hormone-MTORi,6,0.6,1,-247,-265,Pre-treatment
