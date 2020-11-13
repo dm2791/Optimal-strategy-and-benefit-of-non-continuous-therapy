@@ -194,6 +194,9 @@ altb=find(winner==4); %find altbreaks
 winner2=winner;
 winner2(altb)=5; %put as combo breaks
 
+% TODO: check if the commented code below can be deleted. If you think the
+% commented code is usefull please write a few lines explaining:
+
 % rng(1)
 % Mdl = fitcecoc(table2array(tableselect),winner2(1:split));
 % isLoss = resubLoss(Mdl) %.21

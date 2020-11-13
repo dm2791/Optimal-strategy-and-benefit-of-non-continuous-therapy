@@ -1,6 +1,7 @@
 %% load data
 alldatamat=readmatrix('1drugsimulationdata_paper.csv');
 advantagescut=alldatamat(:,11);
+
 %% Unsupervised analysis
 matrices=alldatamat(:,1:10);
 [coeff,score,latent,tsquared,explained,mu] = pca(matrices);
@@ -57,7 +58,7 @@ matrices=matrices(1:20000,:);
 testsetlogc=logc(20001:end);
 logc=logc(1:20000);
 
-%% plot
+%% plot the simulation results
 C =[];
 x=matrices(:,13);
 y=logc;
@@ -67,6 +68,7 @@ for i = 1:length(x)
     C(i) = sum(v)-1;                                          
 end
 figure,scatter(x,y,20,C)
+% TODO: add xlabel, ylabel and title
 
 C =[];
 x=log(matrices(:,15));
@@ -77,6 +79,7 @@ for i = 1:length(x)
     C(i) = sum(v)-1;                                          
 end
 figure,scatter(x,y,20,C)
+% TODO: add xlabel, ylabel and title
 
 C =[];
 x=matrices(:,16);
@@ -87,6 +90,7 @@ for i = 1:length(x)
     C(i) = sum(v)-1;                                         
 end
 figure,scatter(x,y,20,C)
+% TODO: add xlabel, ylabel and title
 
 %% machine learning
 table=array2table(matrices);
@@ -137,6 +141,7 @@ h = gca;
 h.XTickLabel = table.Properties.VariableNames;
 h.XTickLabelRotation = 45;
 h.TickLabelInterpreter = 'none';   %same as non-normalized
+
 %% testset
 tableselecttest=array2table(testsetmatrices);
 selecttest=tableselecttest(:,{'testsetmatrices13' 'testsetmatrices15' 'testsetmatrices16'});

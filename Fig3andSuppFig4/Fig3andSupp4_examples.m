@@ -17,6 +17,8 @@ N = zeros(numberTimesteps,length(N0));
 T = stepsize*(1:numberTimesteps)';
 N(1,:) = N0;
 currN = N0;
+
+
 for jj =2:numberTimesteps
     currdNdT = myderivative(currN,M);
     currN = currN + stepsize*currdNdT;
