@@ -1,6 +1,7 @@
 # Optimal-strategy-and-benefit-of-non-continuous-therapy
 Codes and raw data for paper titled "Optimal strategy and benefit of non-continuous therapy depend on tumor heterogeneity and aggressiveness at the time of diagnosis"<br>
-TODO: describe the data files included in the repository<br>
+<ul>
+Data files included in the repository:<br>
 <ul>
   <li>Fig1andSuppFig1-2/1drugsimulationdata_paper.csv</li>
   <li>Fig2andSuppFig3/2drugsimulationdata_paper.csv</li>
