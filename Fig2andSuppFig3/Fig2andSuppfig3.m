@@ -148,7 +148,7 @@ h.TickLabelInterpreter = 'none';
 %% combo breaks
 t = templateTree('NumVariablesToSample','all',...
     'PredictorSelection','interaction-curvature','Surrogate','on');
-rng(1); % For reproducibility
+rng(1); 
 Mdl = fitrensemble(tableselect,logc(:,5),'Method','Bag','NumLearningCycles',200, ...
     'Learners',t);
 yHat = oobPredict(Mdl);
@@ -167,8 +167,8 @@ h.TickLabelInterpreter = 'none';
 %% Alternating
 t = templateTree('NumVariablesToSample','all',...
     'PredictorSelection','interaction-curvature','Surrogate','on');
-rng(1); % For reproducibility
-%remove rows where alternating advantage =0 because apparently mdl can't handle that
+rng(1); 
+%remove rows where alternating advantage =0 because mdl can't handle that
 indzero=find(logc(:,3)==0);
 logc2test=logc(:,3);
 logc2test(indzero,:)=[];
@@ -204,13 +204,6 @@ winner=winner';
 altb=find(winner==4); %find altbreaks
 winner2=winner;
 winner2(altb)=5; %put as combo breaks
-
-% rng(1)
-% Mdl = fitcecoc(table2array(tableselect),winner2(1:split));
-% isLoss = resubLoss(Mdl) %.21
-% [Label,Score] = predict(Mdl,testsetmatrices(:,53:75));
-% index = Label == winner2(split+1:end);
-% predaccuracy=sum(index)/length(testsetmatrices) %.79
 
 [ranks,weights] = relieff(table2array(tableselect),winner2(1:split),5); 
 figure,bar(weights(ranks))
