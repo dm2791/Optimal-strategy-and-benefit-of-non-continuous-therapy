@@ -168,6 +168,8 @@ figure, plot(timeplot,dataplot(:,5))
 hold on
 plot(BthenAt,BthenAn)
 hold off
+xlabel('time')
+ylabel('size')
 
 %% alternating example
 
@@ -381,6 +383,7 @@ figure, plot(timeplot,dataplot(:,5))
 hold on
 plot(BthenAt,BthenAn)
 hold off
-
+xlabel('time')
+ylabel('size')
 advantagealternating2=trelapsealternating2/bestSOC;
 
