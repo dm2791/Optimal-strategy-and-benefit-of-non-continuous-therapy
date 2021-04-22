@@ -1,5 +1,5 @@
 %% load data
-alldatamat=readmatrix('1drugsimulationdata_paper.csv');
+alldatamat=readmatrix('1drugsimulationdata_paper_rev.csv');
 advantagescut=alldatamat(:,11);
 %% Unsupervised analysis
 matrices=alldatamat(:,1:10);
@@ -56,10 +56,10 @@ matrices(:,15)=alldatamat(:,13); %sum(Moff*n0)
 matrices(:,16)=alldatamat(:,14); %sum(M*n0)
 matrices(:,17)=matrices(:,1)-matrices(:,5); %f
 %%
-testsetmatrices=matrices(20001:end,:);
-matrices=matrices(1:20000,:);
-testsetlogc=logc(20001:end);
-logc=logc(1:20000);
+testsetmatrices=matrices(40001:end,:);
+matrices=matrices(1:40000,:);
+testsetlogc=logc(40001:end);
+logc=logc(1:40000);
 
 %% plot
 C =[];
@@ -217,7 +217,7 @@ xlabel('prediction')
 ylabel('value')
 
 %% binarize method
-figure, scatter([1:20000],sort(logc)) %inflection point around .7712, exp(.7712)=2.16
+figure, scatter([1:40000],sort(logc)) %inflection point around .7712, exp(.7712)=2.16
 xlabel('simulated tumor #')
 ylabel('log(pulse advantage)')
 binarylogc=ones(length(logc),1);
@@ -245,7 +245,7 @@ hold off
 xlabel('false positive rate')
 ylabel('true positive rate')
 %% correlate degree of response with percentage of success
-figure,hist(sortrows(alldatamat(1:20000,12)))
+figure,hist(sortrows(alldatamat(1:40000,12)))
 liklihood_highsuccess=length(find(alldatamat(:,12)>.8))/length(alldatamat); 
 xlabel('#pulse strategies better than continuous/#pulse strategies attempted')
 ylabel('#simulated tumors')
