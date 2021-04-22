@@ -46,22 +46,12 @@ TTR_Let288=tumormarker_data.relativedays2(103)-tumormarker_data.relativedays2(51
 Everol_288=(tumormarker_data.CA_15_3num(105)-tumormarker_data.CA_15_3num(104))/(tumormarker_data.relativedays2(105)-tumormarker_data.relativedays2(104));
 TTR_Everol288=(tumormarker_data.relativedays2(111)+tumormarker_data.relativedays2(112))/2-tumormarker_data.relativedays2(104);
 
-% %patient 15
-% Gem_15=(tumormarker_data.CA_15_3num(12)-tumormarker_data.CA_15_3num(11))/(tumormarker_data.relativedays2(12)-tumormarker_data.relativedays2(11));
-% TTR_Gem15=tumormarker_data.relativedays2(28)-tumormarker_data.relativedays2(11);
-% 
-% %patient 422
-% Cap_422=(tumormarker_data.CA_15_3num(153)-tumormarker_data.CA_15_3num(152))/(tumormarker_data.relativedays2(153)-tumormarker_data.relativedays2(152));
-% TTR_Cap422=tumormarker_data.relativedays2(167)-tumormarker_data.relativedays2(152);
-% Erib_422=(tumormarker_data.CA_15_3num(181)-tumormarker_data.CA_15_3num(180))/(tumormarker_data.relativedays2(181)-tumormarker_data.relativedays2(180));
-% TTR_Erib422=tumormarker_data.relativedays2(190)-tumormarker_data.relativedays2(180);
-% Pac_422=(tumormarker_data.CA_15_3num(191)-tumormarker_data.CA_15_3num(190))/(tumormarker_data.relativedays2(191)-tumormarker_data.relativedays2(190));
-% TTR_Pac422=tumormarker_data.relativedays2(199)-tumormarker_data.relativedays2(190);
 
 %% plot on values for all patients treated daily
 ons=[Let_468;Let_288;Everol_288];
 onsgroup=[{'Let_468'},{'Let_288'},{'Everol_288'}];
-figure,gscatter([1:3],ons,onsgroup')
+figure,bar(ons)
+xlim([.5,3.5])
 ylabel('initial slope on treatment')
 %% load all clinical data
 treatmentTbl=readtable('treatmenttable_paper.csv');
