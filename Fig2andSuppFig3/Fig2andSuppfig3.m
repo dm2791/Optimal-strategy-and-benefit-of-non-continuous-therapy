@@ -1,5 +1,7 @@
 %% load data
-alldata=readmatrix('2drugsimulationdata_paper.csv');
+alldata1=readmatrix('2drugsimulationdata_paper.csv');
+alldata2=readmatrix('2drugsimulation_paper_revpart2.csv');
+alldata=[alldata1;alldata2];
 
 %% Unsupervised analysis
 advantagescut=alldata(:,53:57);
