@@ -1,0 +1,38 @@
+%% load data
+tumormarker_data=readtable('tumormarkers_paper.csv');
+
+%% calculate time to resistance (TTR)
+% for TTR, estimate time to return to starting size for purposes of model
+
+%patient 468 
+TTR_Let468=(tumormarker_data.relativedays2(212)+tumormarker_data.relativedays2(213))/2-tumormarker_data.relativedays2(205);
+TTR_NabPac468=tumormarker_data.relativedays2(222)-tumormarker_data.relativedays2(216);
+
+
+
+% plot patient data overlay with predictions
+%% 468 letrozole
+M=[-0.277601468039394,0;0.000100000000000000,0.0810090694623333];
+Moff=[0.426907753811401,0;0.000100000000000000,0.0810090694623333];
+n0=[55.8000000000000;6.20000000000000];
+x=1.6731;
+timeon=3.9669;
+dayplot=(tumormarker_data.relativedays2(205:213)-19939);
+[breakadvantage,time,dataplot,timeplot,trelapse,singledosen] = plotOptimalBreak_delayedstart(M,Moff,n0,x,timeon,dayplot(2));
+[breakadvantage2,time2,dataplot2,timeplot2,trelapse2,singledosen2] = plotOptimalBreak_delayedstart_PK(M,Moff,n0,x,timeon,dayplot(2),5);
+timescale=linspace(0,trelapse,length(singledosen))*10;
+figure,plot(timescale,singledosen,'k');
+hold on
+%timescale2=linspace(0,time,length(dataplot))*10;
+%plot(timescale2,dataplot(:,3),'m')
+plot(timeplot*10,dataplot(:,3),'m')
+plot(timeplot2*10,dataplot2(:,3),'b')
+scatter(dayplot,tumormarker_data.CA_15_3num(205:213),'r','filled')
+maxy=ylim;
+plot([timescale(end),timescale(end)],[0,maxy(2)],'k--') %284
+plot([TTR_Let468,TTR_Let468],[0,maxy(2)],'k--') %277
+plot([timeplot(end)*10,timeplot(end)*10],[0,maxy(2)],'k--') %469 454
+hold off
+xlabel('days')
+ylabel('tumor burden')
+maxad_486Let=454/284;
